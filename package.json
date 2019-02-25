@@ -1,0 +1,32 @@
+{
+  "name": "web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "init": "node ./config/initDatabase.js",
+    "populate": "node ./config/populate.js",
+    "repopulate": "node ./config/deleteDatabase.js & node ./config/populate.js",
+    "clean": "node ./config/deleteDatabase.js",
+    "test": "mocha || true",
+    "coverage": "istanbul cover _mocha  test/index.test.js -x test/*.test.js",
+    "showcoverage": "open coverage/lcov-report/index.html"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "mysql": "^2.16.0",
+    "nodemailer": "^4.6.8",
+    "random-user": "^2.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0"
+  }
+}
