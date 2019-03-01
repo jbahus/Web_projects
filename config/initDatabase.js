@@ -76,5 +76,5 @@ connection.query("CREATE TABLE IF NOT EXISTS resetPwd (id INT AUTO_INCREMENT PRI
     } else {
         console.log("Table resetpwd created");
     }
+    return (process.exit());
 });
-    
